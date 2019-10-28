@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Colors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Contextual Colors</h2>
+  <p>Use the contextual classes to provide "meaning through colors":</p>
+</div>
+
+<script>
+    const classColors = [
+        "text-muted" , "text-primary" , "text-success" , "text-info" ,
+        "text-warning" , "text-danger" , "text-secondary" , "text-dark" 
+    ];
+    for (let index = 0; index < classColors.length; index++) {
+        const classColor = classColors[index];
+        document.querySelector('div').innerHTML += 
+        `<p class=${classColor}>${classColor}</p>`
+    }
+</script>
+
+
+</body>
+</html>
