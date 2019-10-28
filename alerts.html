@@ -12,19 +12,22 @@
 <body>
 
 <div class="container">
-  <h2>Contextual Colors</h2>
+  <h2>Contextual Alerts</h2>
   <p>Use the contextual classes to provide "meaning through colors":</p>
 </div>
 
 <script>
     const colors = [
-        "muted" , "primary" , "success" , "info" ,
+        "primary" , "success" , "info" ,
         "warning" , "danger" , "secondary" , "dark" 
     ];
     for (let index = 0; index < colors.length; index++) {
-        const classColor = `text-${colors[index]}`;
+        const classColor = `alert-${colors[index]}`;
         document.querySelector('div').innerHTML += 
-        `<p class=${classColor}>${classColor}</p>`
+        `<div class="alert ${classColor} alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <p>${colors[index]}</p>
+        </div>`
     }
 </script>
 
