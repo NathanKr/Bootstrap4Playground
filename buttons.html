@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Alerts</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -11,26 +11,23 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Contextual Alerts</h2>
-  <p>Use the contextual classes to provide "meaning through colors":</p>
+<div id="idContainer1" class="container">
+  <h2>Button Styles</h2>
+  <h6>Hover over the buttons and click on them to get their "Look & Feel"</h6>
+  <button type="button" class="btn">Basic</button>
 </div>
-
 <script>
     const colors = [
-        "primary" , "success" , "info" ,
-        "warning" , "danger" , "secondary" , "dark" 
+        "muted" , "primary" , "success" , "info" ,
+        "warning" , "danger" , "secondary" , "dark" , "light" , "link"
     ];
+
+    const parent = document.getElementById("idContainer1");
     for (let index = 0; index < colors.length; index++) {
-        const classColor = `alert-${colors[index]}`;
-        document.querySelector('div').innerHTML += 
-        `<div class="alert ${classColor} alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">x</button>
-            <p>${colors[index]}</p>
-        </div>`
+        const color = colors[index];
+        parent.innerHTML += 
+        `<button type="button" class="btn btn-${color}">${color}</button> `;
     }
 </script>
-
-
 </body>
 </html>
