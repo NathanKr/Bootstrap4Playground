@@ -34,8 +34,12 @@
     new LinkItem("Color","./colors.html") , 
     new LinkItem("Form","./forms.html") , 
     new LinkItem("Grid","./grids.html") , 
+    new LinkItem("List","./lists.html") , 
     new LinkItem("Modal","./modals.html") , 
+    new LinkItem("Table","./tables.html") 
     ];
+
+    
     for (let index = 0; index < linkItems.length; index++) {
       const linkItem = linkItems[index];
       document.querySelector('nav > ul').innerHTML += 
@@ -43,6 +47,7 @@
           <a class="nav-link" href=${linkItem.href}>${linkItem.text}</a>
       </li>`
     }
+    
   </script>
 
 </body>

@@ -23,8 +23,11 @@
     ];
     for (let index = 0; index < colors.length; index++) {
         const classColor = `text-${colors[index]}`;
+        const classBgColor = `bg-${colors[index]}`;
         document.querySelector('div').innerHTML += 
         `<p class=${classColor}>${classColor}</p>`
+        document.querySelector('div').innerHTML += 
+        `<p class=${classBgColor}>${classBgColor}</p>`
     }
 </script>
 

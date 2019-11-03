@@ -14,7 +14,9 @@
 <div id="idContainer1" class="container">
   <h2>Button Styles</h2>
   <p>Hover over the buttons and click on them to get their "Look & Feel"</p>
-  <button type="button" class="btn">Basic</button>
+  <hr>
+  <h4>default size buttons</h4>
+  <button type="button" class="btn">basic</button>
 </div>
 <script>
     const colors = [
@@ -22,12 +24,28 @@
         "warning" , "danger" , "secondary" , "dark" , "light" , "link"
     ];
 
+    function createSizeButtons(sizeClass){
+      parent.innerHTML += '<hr>';
+      parent.innerHTML += `<h4>${sizeClass} size buttons</h4>`
+      for (let index = 0; index < colors.length; index++) {
+          const color = colors[index];
+          parent.innerHTML += 
+          `<button type="button" class="btn ${sizeClass} btn-${color}">${color}</button> `;
+      }
+    }
     const parent = document.getElementById("idContainer1");
+    
     for (let index = 0; index < colors.length; index++) {
         const color = colors[index];
         parent.innerHTML += 
         `<button type="button" class="btn btn-${color}">${color}</button> `;
     }
+    
+    
+    createSizeButtons('btn-lg');
+    createSizeButtons('btn-sm');
+    
+    
 </script>
 </body>
 </html>
