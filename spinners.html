@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Spinners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Spiners</h2>
+  <p>Use spinner to visually indicate long operations in motion e.g. request info from slow server</p>
+  <p>Spinner are used mostly with AJAX call </p>
+  <hr>
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border"></span>
+      <span>Loading ...</span>
+    </button>
+    <hr>
+</div> 
+
+<script>
+  const colors = [
+        "primary" , "success" , "info" ,
+        "warning" , "danger" , "secondary" , "dark" 
+    ];
+
+    const objParent = document.querySelector('.container');
+    function showSpinner(spinnerType)
+    {
+        colors.forEach(color => {
+          objParent.innerHTML += 
+          `<div class="${spinnerType} text-${color}">
+          </div>`      
+        });  
+    }
+    showSpinner('spinner-border');  
+    objParent.innerHTML += '<hr>';
+    showSpinner('spinner-grow');  
+</script>
+
+</body>
+</html>
