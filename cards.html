@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
-    <body>
-        <div class="jumbotron text-center">
-                <h1>First Page With Bootstrap</h1>
-                <h5 class='text-danger'>Resize this page to see the responsive effect!</h5>
-                <p>col-sm-4 col-md-8 , col-sm-4 col-md-2 , col-sm-4 col-md-2</p>
-                <p>notice two breakpoints here</p>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-8">
-                <h3>Column 1</h3><p>Lorem ipsum dolor..</p>
-                </div>
-                <div class="col-sm-4 col-md-2">
-                <h3>Column 2</h3><p>Lorem ipsum dolor..</p>
-                </div>
-                <div class="col-sm-4 col-md-2">
-                <h3>Column 3</h3><p>Lorem ipsum dolor..</p>
-                </div>
-            </div>
-        </div>
-    </body>
+  <title>Bootstrap Cards</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Cards</h2>
+  <p>Card is bordered box with : header , content and footer</p>
+  <hr>
+  
+  <p>Card Header and Footer</p>
+  <div class="card">
+    <div class="card-header">Header</div>
+    <div class="card-body">Content</div> 
+    <div class="card-footer">Footer</div>
+  </div>
+  
+  <hr>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.0-9/28577421_10156361292419548_7519822899011278509_n.jpg?_nc_cat=103&_nc_oc=AQl-DCbAmTKmvAdYzbF3Iala-El2J3kEwGtT7tLsvCJxwda9p3Uu7Te2fFH-rr7LCSg&_nc_ht=scontent.fsdv1-2.fna&oh=7adf2acd9a677a77aca4c206fec5cd74&oe=5E44D4E3" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <br>
+</div>
+</body>
 </html>
